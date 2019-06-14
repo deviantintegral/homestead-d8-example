@@ -19,3 +19,6 @@ export PATH=$PATH:$(pwd)/vendor/bin
 drush -y si \
   --db-url=mysql://homestead:secret@localhost/homestead \
   --site-name "Homestead example site"
+
+echo -n 'Admin login link: '
+drush @self.local uli

@@ -13,6 +13,10 @@
 #  root: /path/to/drupal
 #  uri: http://stage.example.com
 
+local:
+  root: /home/vagrant/code
+  uri: http://homestead-d8.local
+
 homestead:
   host: homestead-d8.local
   # Homestead automatically copies your regular public key into the VM.
