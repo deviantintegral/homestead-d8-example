@@ -7,3 +7,15 @@
 # If you have user-specific configurations you would like
 # to apply, you may also create user-customizations.sh,
 # which will be run after this script.
+
+# The hostname is set on first boot, but avahi doesn't pick it up until a
+# restart. This needs to be fixed upstream
+sudo systemctl restart avahi-daemon
+
+# Install Drupal for this demo. For existing sites, you could grab a database
+# and import that instead.
+cd code
+export PATH=$PATH:$(pwd)/vendor/bin
+drush -y si \
+  --db-url=mysql://homestead:secret@localhost/homestead \
+  --site-name "Homestead example site"
