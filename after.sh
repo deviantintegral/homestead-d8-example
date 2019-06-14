@@ -21,5 +21,9 @@ drush -y si \
   --site-name "Homestead example site" \
   demo_umami
 
+echo ""
 echo -n 'Admin login link: '
 drush @self.local uli
+
+echo ""
+echo 'Database URL for PHPStorm / WebStorm: jdbc:mysql://homestead:secret@localhost:33060/homestead'
