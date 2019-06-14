@@ -12,8 +12,8 @@ folders:
     -
         map: .
         to: /home/vagrant/code
-        # type: rsync also good too.
-        type: nfs
+        # type: nfs also good too, but be aware of permissions issues.
+        type: rsync
 sites:
     -
         map: homestead-d8.local
