@@ -22,3 +22,6 @@
 
 # Ignore .env files as they are personal
 /.env
+
+# This file will contain local paths
+/Homestead.yaml
