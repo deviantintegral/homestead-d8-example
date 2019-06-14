@@ -18,6 +18,7 @@ cd code
 export PATH=$PATH:$(pwd)/vendor/bin
 drush -y si \
   --db-url=mysql://homestead:secret@localhost/homestead \
+  --profile demo_umami \
   --site-name "Homestead example site"
 
 echo -n 'Admin login link: '
