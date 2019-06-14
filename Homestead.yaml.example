@@ -19,6 +19,7 @@ sites:
         map: homestead-d8.local
         to: /home/vagrant/code/web
         type: "apache"
+        xhgui: 'true'
 databases:
     - homestead
 name: homestead-d8
