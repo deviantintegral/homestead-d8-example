@@ -25,3 +25,5 @@
 
 # This file will contain local paths
 /Homestead.yaml
+
+/.vagrant
