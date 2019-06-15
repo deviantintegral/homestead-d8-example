@@ -14,6 +14,9 @@ folders:
         to: /home/vagrant/code
         # type: nfs also good too, but be aware of permissions issues.
         type: rsync
+        options:
+          rsync__args: ["--verbose", "--archive", "--delete", "-zz"]
+          rsync__exclude: [".git/", ".vagrant/"]
 sites:
     -
         map: homestead-d8.local
