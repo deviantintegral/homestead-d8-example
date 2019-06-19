@@ -12,7 +12,6 @@ folders:
     -
         map: .
         to: /home/vagrant/code
-        # type: nfs also good too, but be aware of permissions issues.
         type: rsync
         options:
           rsync__args: ["--verbose", "--archive", "--delete", "-zz"]
@@ -21,8 +20,6 @@ sites:
     -
         map: homestead-d8.local
         to: /home/vagrant/code/web
-        type: "apache"
-        xhgui: 'true'
 databases:
     - homestead
 name: homestead-d8
