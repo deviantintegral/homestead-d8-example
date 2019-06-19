@@ -27,3 +27,7 @@ drush @self.local uli
 
 echo ""
 echo 'Database URL for PHPStorm / WebStorm: jdbc:mysql://homestead:secret@localhost:33060/homestead'
+
+# Fix lmm volume group until it's built upstream.
+echo 'VG="homestead-vg"' | sudo tee -a /opt/lmm/config.sh > /dev/null
+echo 'VG_PATH="/homestead-vg"' | sudo tee -a /opt/lmm/config.sh > /dev/null
