@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # If you would like to do some extra provisioning you may
 # add any commands you wish to this file and they will
@@ -16,18 +16,17 @@ sudo systemctl restart avahi-daemon
 # and import that instead.
 cd code
 export PATH=$PATH:$(pwd)/vendor/bin
-drush -y si \
-  --db-url=mysql://homestead:secret@localhost/homestead \
-  --site-name "Homestead example site" \
-  demo_umami
 
-echo ""
-echo -n 'Admin login link: '
-drush @self.local uli
+mount | grep code
 
-echo ""
-echo 'Database URL for PHPStorm / WebStorm: jdbc:mysql://homestead:secret@localhost:33060/homestead'
-
-# Fix lmm volume group until it's built upstream.
-echo 'VG="homestead-vg"' | sudo tee -a /opt/lmm/config.sh > /dev/null
-echo 'VG_PATH="/homestead-vg"' | sudo tee -a /opt/lmm/config.sh > /dev/null
+for i in {1..3}
+do
+  echo "Install #$i"
+  PROVIDER=$(cat provider)
+  SYNC_TYPE=$(cat sync-type)
+  echo -n "$PROVIDER,$SYNC_TYPE," >> /vagrant/results.csv
+  /usr/bin/time -o /vagrant/results.csv -a -f '%U,%S,%E,%P,%I,%O' drush -y si \
+    --db-url=mysql://homestead:secret@localhost/homestead \
+    --site-name "Homestead example site" \
+    standard
+done

@@ -27,3 +27,8 @@
 /Homestead.yaml
 
 /.vagrant
+
+# Benchmarking files
+results.csv
+provider
+sync-type
