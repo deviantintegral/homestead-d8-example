@@ -1,0 +1,23 @@
+# Note that vendor/bin/homestead make will strip comments.
+# IP conflicts are always tricky, watch for this when travelling.
+ip: 192.168.10.10
+memory: 2048
+# Set this to the number of physical CPUs you have.
+cpus: 4
+provider: virtualbox
+authorize: ~/.ssh/id_rsa.pub
+keys:
+    - ~/.ssh/id_rsa
+folders:
+    -
+        map: .
+        to: /home/vagrant/code
+        type: nfs
+sites:
+    -
+        map: homestead-d8.local
+        to: /home/vagrant/code/web
+databases:
+    - homestead
+name: homestead-d8
+hostname: homestead-d8
