@@ -25,7 +25,8 @@ do
   PROVIDER=$(cat provider)
   SYNC_TYPE=$(cat sync-type)
   echo -n "$PROVIDER,$SYNC_TYPE," >> /vagrant/results.csv
-  /usr/bin/time -o /vagrant/results.csv -a -f '%U,%S,%E,%P,%I,%O' drush -y si \
+  /usr/bin/time -o /vagrant/results.csv -a -f '%U,%S,%E,%P,%I,%O' \
+    drush -y si \
     --db-url=mysql://homestead:secret@localhost/homestead \
     --site-name "Homestead example site" \
     standard
