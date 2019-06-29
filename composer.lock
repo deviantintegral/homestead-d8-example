@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5741bb50caad13544793129ea6499318",
+    "content-hash": "d37c45c19eef70e0b84bc079ad69f8d1",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -3233,16 +3233,16 @@
         },
         {
             "name": "laravel/homestead",
-            "version": "v8.5.6",
+            "version": "dev-version_9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/homestead.git",
-                "reference": "d1a14d0141452b1dfbf0a66b595737848ebc2b3c"
+                "reference": "d0ae56352f7b9854a034d60e3328dafe01fdd53e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/homestead/zipball/d1a14d0141452b1dfbf0a66b595737848ebc2b3c",
-                "reference": "d1a14d0141452b1dfbf0a66b595737848ebc2b3c",
+                "url": "https://api.github.com/repos/laravel/homestead/zipball/d0ae56352f7b9854a034d60e3328dafe01fdd53e",
+                "reference": "d0ae56352f7b9854a034d60e3328dafe01fdd53e",
                 "shasum": ""
             },
             "require": {
@@ -3279,7 +3279,7 @@
                 }
             ],
             "description": "A virtual machine for web artisans.",
-            "time": "2019-06-05T22:12:29+00:00"
+            "time": "2019-06-24T21:47:31+00:00"
         },
         {
             "name": "league/container",
@@ -8515,7 +8515,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "laravel/homestead": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

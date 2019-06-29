@@ -8,6 +8,8 @@ provider: virtualbox
 authorize: ~/.ssh/id_rsa.pub
 keys:
     - ~/.ssh/id_rsa
+features:
+  - xhgui: true
 folders:
     -
         map: .
